@@ -1,0 +1,80 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#263859">
+
+    <title>Mobile Sensor App</title>
+
+    <link rel="manifest" href="./manifest.json">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+            margin: 0;
+            background: #f2f5f9;
+            color: #263859;
+        }
+
+        .sensor-box {
+            max-width: 380px;
+            margin: 25px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 3px 10px #00000015;
+        }
+
+        .reading {
+            font-size: 22px;
+            margin: 18px 0;
+        }
+
+        button {
+            padding: 12px 20px;
+            border: none;
+            border-radius: 8px;
+            background: #263859;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        #status {
+            margin-top: 18px;
+            color: #555;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Mobile Sensor App</h1>
+    <p>Move or tilt your phone to see the readings.</p>
+
+    <div class="sensor-box">
+        <h2>Accelerometer</h2>
+
+        <p class="reading">
+            X: <span id="accelX">--</span>
+        </p>
+
+        <p class="reading">
+            Y: <span id="accelY">--</span>
+        </p>
+
+        <p class="reading">
+            Z: <span id="accelZ">--</span>
+        </p>
+
+        <button id="startButton">Start Sensor</button>
+
+        <p id="status">Press the button to begin.</p>
+    </div>
+
+    <script src="./app.js"></script>
+</body>
+</html>
