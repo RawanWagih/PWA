@@ -6,3 +6,7 @@ self.addEventListener("install", () => {
 self.addEventListener("activate", () => {
     console.log("Service worker activated.");
 });
+
+self.addEventListener("fetch", (event) => {
+    // Required by Chrome to pass PWA installability criteria
+});
